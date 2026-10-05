@@ -1,0 +1,76 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environment
+# =========================
+
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# ChromaDB / Vector stores
+# =========================
+
+chroma_db/
+test_chroma_db/
+
+# =========================
+# Hugging Face / ML caches
+# =========================
+
+.cache/
+.cache/
+huggingface/
+transformers/
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS generated files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
