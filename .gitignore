@@ -74,3 +74,5 @@ desktop.ini
 # =========================
 
 .ipynb_checkpoints/
+
+evaluation_results.json
