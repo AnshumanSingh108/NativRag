@@ -57,7 +57,36 @@ def main():
         raise ValueError("No documents found to index.")
 
     print(
-        f"\nTotal documents to index: "
+        f"\nTotal documents loaded: "
+        f"{len(all_documents)}"
+    )
+
+    # Deduplicate by source + data_id (keep first occurrence).
+    seen_ids = set()
+    unique_documents = []
+
+    for document in all_documents:
+        doc_id = (
+            f"{document['metadata']['source']}_"
+            f"{document['metadata']['data_id']}"
+        )
+
+        if doc_id not in seen_ids:
+            seen_ids.add(doc_id)
+            unique_documents.append(document)
+
+    duplicates_removed = len(all_documents) - len(unique_documents)
+
+    if duplicates_removed > 0:
+        print(
+            f"Removed {duplicates_removed} duplicate "
+            f"documents."
+        )
+
+    all_documents = unique_documents
+
+    print(
+        f"Unique documents to index: "
         f"{len(all_documents)}"
     )
 

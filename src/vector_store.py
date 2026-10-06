@@ -61,12 +61,18 @@ class VectorStore:
             for document in documents
         ]
 
-        self.collection.upsert(
-            ids=ids,
-            documents=texts,
-            embeddings=embeddings.tolist(),
-            metadatas=metadatas,
-        )
+        # ChromaDB has a max batch size limit (5461).
+        # We batch our inserts to stay well under the limit.
+        batch_size = 5000
+        embeddings_list = embeddings.tolist()
+
+        for i in range(0, len(ids), batch_size):
+            self.collection.upsert(
+                ids=ids[i : i + batch_size],
+                documents=texts[i : i + batch_size],
+                embeddings=embeddings_list[i : i + batch_size],
+                metadatas=metadatas[i : i + batch_size],
+            )
 
     def count(self):
         """Return the number of documents in the collection."""
