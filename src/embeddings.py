@@ -1,13 +1,17 @@
+import sys
+from pathlib import Path
+
 from sentence_transformers import SentenceTransformer
 
-
-MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+# Add project root to path for config import
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import EMBEDDING_MODEL_NAME
 
 
 class EmbeddingModel:
     """Generate multilingual embeddings for RAG documents."""
 
-    def __init__(self, model_name=MODEL_NAME):
+    def __init__(self, model_name=EMBEDDING_MODEL_NAME):
         self.model = SentenceTransformer(model_name)
 
     def generate(self, documents):

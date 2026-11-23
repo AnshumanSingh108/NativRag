@@ -1,0 +1,7 @@
+# Extra dependencies for scripts/train_lora.py (run on a CUDA GPU machine,
+# e.g. Colab/Kaggle/cloud VM). The rest of the project needs
+# requirements.txt only.
+torch>=2.0.0
+transformers>=4.45.0
+peft>=0.13.0
+huggingface_hub>=0.24.0

@@ -29,8 +29,8 @@ ENV/
 # ChromaDB / Vector stores
 # =========================
 
-chroma_db/
-test_chroma_db/
+# qa_kb/
+country_kb/
 
 # =========================
 # Hugging Face / ML caches
@@ -75,4 +75,22 @@ desktop.ini
 
 .ipynb_checkpoints/
 
-evaluation_results.json
+
+# =========================
+# Evaluation results
+# =========================
+
+evaluation_results*.json
+
+
+
+# =========================
+# Documents
+# =========================
+docs
+country_pdfs
+# =========================
+# Fine-tuning outputs
+# =========================
+finetune_data/
+Modelfile

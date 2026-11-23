@@ -1,5 +1,9 @@
-from src.embeddings import EmbeddingModel
-from src.vector_store import VectorStore
+import sys
+from pathlib import Path
+
+# Add project root to path for config import
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import DEFAULT_TOP_K
 
 
 class Retriever:
@@ -9,7 +13,7 @@ class Retriever:
         self.vector_store = vector_store
         self.embedding_model = embedding_model
 
-    def retrieve(self, query, top_k=5):
+    def retrieve(self, query, top_k=DEFAULT_TOP_K):
         """
         Retrieve the most relevant documents for a user query.
 
