@@ -29,7 +29,7 @@ ENV/
 # ChromaDB / Vector stores
 # =========================
 
-# qa_kb/
+qa_kb/
 country_kb/
 
 # =========================
@@ -93,4 +93,20 @@ country_pdfs
 # Fine-tuning outputs
 # =========================
 finetune_data/
-Modelfile
+# Modelfile is tracked: it is hand-written (relative FROM path, training-matched
+# TEMPLATE) and is needed to re-register the model.
+
+
+# =========================
+# Fine Tuned adapter .tar
+# =========================
+lora_adapter.tar
+# =========================
+# Merged/converted model weights (GGUF, 3+ GB)
+# =========================
+models/
+
+# =========================
+# LoRA adapter folder (trained weights, ~400 MB)
+# =========================
+lora_adapter/

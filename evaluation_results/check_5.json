@@ -1,0 +1,343 @@
+{
+  "config": {
+    "knowledge_base": "qa",
+    "llm_model": "nativrag-finetuned",
+    "bert_model": "bert-base-multilingual-cased",
+    "top_k": 5
+  },
+  "summary": {
+    "total_samples": 15,
+    "mean_precision": 0.7347638408342997,
+    "mean_recall": 0.7244673689206441,
+    "mean_f1": 0.7282840927441915,
+    "mean_rouge1_f1": 0.28101131799626006,
+    "mean_bleu": 0.09631267658818994,
+    "country_f1": {
+      "bangladesh": 0.7013248920440673,
+      "india": 0.7565370202064514,
+      "qatar": 0.7269903659820557
+    },
+    "country_rouge1_f1": {
+      "bangladesh": 0.2505868304215765,
+      "india": 0.32744360902255637,
+      "qatar": 0.26500351454464727
+    },
+    "country_bleu": {
+      "bangladesh": 0.02480191460799095,
+      "india": 0.2200915921335707,
+      "qatar": 0.04404452302300817
+    },
+    "overlap_f1": {
+      "answer_in_context": {
+        "mean_f1": 0.8223453164100647,
+        "n": 3
+      },
+      "answer_not_in_context": {
+        "mean_f1": 0.7047687868277231,
+        "n": 12
+      }
+    }
+  },
+  "samples": [
+    {
+      "data_id": "ea79365cd3f85432584e2a8f6b13f267",
+      "country": "bangladesh",
+      "query": "What is the sacred festival of Buddhism?",
+      "ground_truth": "Celebrated as one of the most important Buddhist festivals, Wesak celebrates the Buddha's birth, enlightenment, and death. Recognized as Buddha's first teaching, Wassana also marks the beginning of the 3-month 'Rains Retreat' for nuns and monks.",
+      "generated_answer": "Buddha's birthday is a sacred Buddhist festival, celebrated on the full moon day of the third month of the lunar calendar.",
+      "retrieved_sources": [
+        "https://www.bbc.co.uk/bitesize/guides/zkdbcj6/revision/1",
+        "https://hindi.news18.com/news/madhya-pradesh/vidisha-madhya-pradesh-hariyali-teej-celebrated-what-importance-worship-7281773.html#:~:text=%E0%A4%B0%E0%A4%B5%E0%A4%BF%20%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%B9%2F%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A4%BF%E0%A4%B6%E0%A4%BE.,%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A4%95%E0%A5%80%20%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%BE%20%E0%A4%95%E0%A4%B0%E0%A4%A4%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A4%82.",
+        "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Pooram&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Pooram%20pronounced%20%5Bpu%CB%90%C9%BEam%5D%20is%20an,also%20Kollam%20district%2C%20after%20the",
+        "https://www.jagran.com/spiritual/religion-basant-panchami-2024-date-basant-panchami-what-to-do-and-what-not-to-do-on-23649882.html#:~:text=Buy%20Now-,%E0%A4%AC%E0%A4%B8%E0%A4%82%E0%A4%A4%20%E0%A4%AA%E0%A4%82%E0%A4%9A%E0%A4%AE%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%20%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%95%E0%A5%80%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%82%20%E0%A4%B8%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A4%95%E0%A5%80,%E0%A4%B0%E0%A4%82%E0%A4%97%20%E0%A4%95%E0%A5%87%20%E0%A4%B5%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%20%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A5%A4",
+        "https://www.jagran.com/spiritual/religion-basant-panchami-2024-how-is-the-festival-of-basant-panchami-celebrated-in-which-state-of-the-country-23645140.html#:~:text=%E0%A4%AC%E0%A4%B8%E0%A4%82%E0%A4%A4%20%E0%A4%AA%E0%A4%82%E0%A4%9A%E0%A4%AE%E0%A5%80%20%E0%A4%95%E0%A5%87%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%20%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE,%E0%A4%95%E0%A4%BE%20%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5%20%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7478431463241577,
+      "bert_recall": 0.6928001046180725,
+      "bert_f1": 0.7192700505256653,
+      "rouge1_f1": 0.3278688524590163,
+      "bleu": 0.031391367360791705
+    },
+    {
+      "data_id": "c78bdc95a786382f2fffc42307b4048d",
+      "country": "bangladesh",
+      "query": "Which type of government was adopted in Bangladesh after its independence what were the results?",
+      "ground_truth": "Since Bangladesh achieved its independence on 26 March 1971 from Pakistan, Bangladesh introduced parliamentary democracy into its political system; however, a military coup in 1975 halted the process. It was restored in 1991 through a constitutional amendment.",
+      "generated_answer": "The first constitution of Bangladesh was adopted in 1972, which was based on the principles of secularism, nationalism, and democracy. The constitution established Bangladesh as a parliamentary democracy with a president as the head of state and a prime minister as the head of government.",
+      "retrieved_sources": [
+        "https://2009-2017.state.gov/documents/organization/160056.pdf",
+        "https://en.wikipedia.org/wiki/Government_of_Bangladesh",
+        "https://2009-2017.state.gov/documents/organization/160056.pdf",
+        "https://en.wikipedia.org/wiki/President_of_Bangladesh",
+        "https://en.wikipedia.org/wiki/Democracy_in_Bangladesh"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7057697772979736,
+      "bert_recall": 0.7135379314422607,
+      "bert_f1": 0.7096325755119324,
+      "rouge1_f1": 0.24390243902439024,
+      "bleu": 0.024315419644986368
+    },
+    {
+      "data_id": "060db4edd69a41d474bd72da96717698",
+      "country": "bangladesh",
+      "query": "What is the largest highway in Bangladesh?",
+      "ground_truth": "The N1 or Dhaka–Chittagong Highway is the main transportation artery of Bangladesh, connecting the capital city of Dhaka and the southern port city of Chittagong. Approximately 465 kilometres (289 miles) in length, the highway starts at Jatrabari in Dhaka and ends at Teknaf in Cox's Bazar.",
+      "generated_answer": "The MRT-6 is the longest metro rail line in Bangladesh.",
+      "retrieved_sources": [
+        "https://www.tbsnews.net/bangladesh/infrastructure/dhaka-elevated-expressway-another-milestone-communication-pm-693430",
+        "https://en.wikipedia.org/wiki/Grand_Trunk_Road",
+        "https://en.wikipedia.org/wiki/List_of_roads_in_Bangladesh",
+        "https://rhd.portal.gov.bd/sites/default/files/files/rhd.portal.gov.bd/notices/6f04d0df_c2a8_4daa_a345_1cd6b7289139/PDPP-Dhk-Sylhet(16-4-15)%20(1).docx",
+        "https://timesofindia.indiatimes.com/world/south-asia/a-dream-come-true-for-170-million-people-of-bangladesh-pm-hasina-inaugurates-padma-bridge/articleshow/92450420.cms"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.8063468933105469,
+      "bert_recall": 0.6377926468849182,
+      "bert_f1": 0.712233304977417,
+      "rouge1_f1": 0.1694915254237288,
+      "bleu": 0.003261970259285729
+    },
+    {
+      "data_id": "f157ec17864cf7ad774019cd4a1176ba",
+      "country": "bangladesh",
+      "query": "What are some food safety precautions?",
+      "ground_truth": "Clean—Wash hands and surfaces often. Separate—Don't cross-contaminate. Cook—Cook to proper temperatures, checking with a food thermometer. Chill—Refrigerate promptly.",
+      "generated_answer": "Keep raw meat, poultry, and seafood separate from ready-to-eat foods. Wash your hands before and after handling raw meat, poultry, and seafood. Wash utensils and cutting boards after use. Keep hot foods hot and cold foods cold.",
+      "retrieved_sources": [
+        "https://www.who.int/publications-detail-redirect/9789241594639",
+        "https://www.researchgate.net/publication/258029210_Encountering_Food_Safety_Challenges_in_Bangladesh-A_Regulatory_Analysis_the_Chittagong_University_Journal_of_Law_2011",
+        "https://swr.indianrailways.gov.in/view_section.jsp?lang=0&id=0,7,289,391",
+        "https://www.dhakatribune.com/opinion/op-ed/339056/ensuring-food-safety-in-bangladesh",
+        "https://www.thehealthsite.com/hindi/diet/3-major-side-effects-of-eating-street-food-in-hindi-974575/#:~:text=%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%AC%E0%A4%A2%E0%A4%BC%E0%A4%A8%E0%A5%87%20%E0%A4%95%E0%A4%BE%20%E0%A4%96%E0%A4%A4%E0%A4%B0%E0%A4%BE&text=%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A4%B8%E0%A5%87%20%E0%A4%B5%E0%A5%8B%20%E0%A4%95%E0%A4%BE%E0%A4%AB%E0%A5%80%20%E0%A4%B9%E0%A4%A6%20%E0%A4%A4%E0%A4%95,%E0%A4%95%E0%A4%BE%20%E0%A4%96%E0%A4%A4%E0%A4%B0%E0%A4%BE%20%E0%A4%AC%E0%A4%A2%E0%A4%BC%20%E0%A4%9C%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.6451869010925293,
+      "bert_recall": 0.6359968185424805,
+      "bert_f1": 0.6405588984489441,
+      "rouge1_f1": 0.15873015873015872,
+      "bleu": 0.014104555382959006
+    },
+    {
+      "data_id": "3fd1e2e56113474a9e3e5372c5ade029",
+      "country": "bangladesh",
+      "query": "Who is the owner of daily Star newspaper?",
+      "ground_truth": "The Daily Star is owned by Mediaworld, in which a major share is held by the Transcom Group. Star Business, the business edition of the paper, is highly popular. The newspaper serves its Bengali readership digitally through its website.",
+      "generated_answer": "The Daily Star is owned by the Bangabandhu Group, a Bangladeshi conglomerate.",
+      "retrieved_sources": [
+        "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Dharmendra&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%20%E0%A4%95%E0%A4%BE%20%E0%A4%9C%E0%A4%A8%E0%A5%8D%E0%A4%AE%208%20%E0%A4%A6%E0%A4%BF%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%B0,%E0%A4%95%E0%A5%87%20%E0%A4%B0%E0%A5%82%E0%A4%AA%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B9%E0%A5%81%E0%A4%86%20%E0%A4%A5%E0%A4%BE%E0%A5%A4",
+        "https://uk.linkedin.com/in/clive-gillmore-5a830932",
+        "https://olympics.com/hi/news/india-s-most-decorated-archers-at-the-world-cup-a-look-back#:~:text=%E0%A4%85%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A5%81%20%E0%A4%A6%E0%A4%BE%E0%A4%B8%20(Atanu%20Das)%20%E0%A4%A8%E0%A5%87,%E0%A4%AA%E0%A4%A6%E0%A4%95%20%E0%A4%AD%E0%A5%80%20%E0%A4%9C%E0%A5%8B%E0%A4%A1%E0%A4%BC%20%E0%A4%B2%E0%A4%BF%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4",
+        "https://translate.google.com/translate?u=https://ludhiana.nic.in/about-district/history/&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%A8%E0%A4%AF%E0%A4%BE%20%E0%A4%B6%E0%A4%B9%E0%A4%B0%20%E0%A4%AE%E0%A5%82%E0%A4%B2%20%E0%A4%B0%E0%A5%82%E0%A4%AA%20%E0%A4%B8%E0%A5%87,%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%A8%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%B2%E0%A5%81%E0%A4%A7%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%8B%20%E0%A4%97%E0%A4%AF%E0%A4%BE%E0%A5%A4",
+        "https://www.abplive.com/photo-gallery/entertainment/bollywood-kareena-kapoor-khan-and-saif-ali-khan-own-this-expensive-things-know-here-couple-net-worth-2573141#:~:text=%E0%A4%B5%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%95%E0%A4%B0%E0%A5%80%E0%A4%A8%E0%A4%BE%20%E0%A4%95%E0%A4%AA%E0%A5%82%E0%A4%B0%20%E0%A4%95%E0%A5%80%20%E0%A4%A8%E0%A5%87%E0%A4%9F%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A5,%E0%A4%8F%E0%A4%82%E0%A4%A1%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%B8%E0%A5%87%20%E0%A4%AA%E0%A5%88%E0%A4%B8%E0%A4%BE%20%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%88%E0%A4%82.&text=%E0%A4%9C%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%B0%20%E0%A4%B9%E0%A5%88%20%E0%A4%95%E0%A4%BF%20%E0%A4%87%E0%A4%A4%E0%A4%A8%E0%A5%80%20%E0%A4%A8%E0%A5%87%E0%A4%A5%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A5,%E0%A4%8F%E0%A4%95%20%E0%A4%B2%E0%A5%87%E0%A4%B5%E0%A4%BF%E0%A4%B6%20%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%AB%20%E0%A4%9C%E0%A5%80%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88."
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7364828586578369,
+      "bert_recall": 0.7137331962585449,
+      "bert_f1": 0.7249296307563782,
+      "rouge1_f1": 0.3529411764705882,
+      "bleu": 0.05093626039193194
+    },
+    {
+      "data_id": "7220237d5ec670dd376e132d3fd3a3a1",
+      "country": "india",
+      "query": "करवा चौथ पर महिलाएं क्या खाती हैं?",
+      "ground_truth": "नारियल का पानी ,मिठाई , फ्रुट्स और ड्रायफ्रुट्स",
+      "generated_answer": "करवाचौथ व्रत में सरगी खाने की परंपरा है। ऐसे में आप सरगी में एक बड़ा गिलास दूध का पी सकते हैं।",
+      "retrieved_sources": [
+        "https://ndtv.in/food/karwa-chauth-niyam-karwa-chauth-vrat-se-pahle-kya-khaye-vrat-ke-baad-kya-nhi-khaye-karwa-chauth-vrat-rules-4526944#:~:text=%E0%A4%95%E0%A4%B0%E0%A4%B5%E0%A4%BE%20%E0%A4%9A%E0%A5%8C%E0%A4%A5%20%E0%A4%B5%E0%A5%8D%E0%A4%B0%E0%A4%A4%20%E0%A4%B0%E0%A4%96%E0%A4%A8%E0%A5%87%20%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%80,%E0%A4%AD%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A5%80%E0%A4%9C%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%8B%20%E0%A4%B6%E0%A4%BE%E0%A4%AE%E0%A4%BF%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82.",
+        "https://www.prabhatkhabar.com/life-and-style/karva-chauth-2023-sargi-thali-importance-in-hindi-list-of-healthy-and-nutritious-food-items-unk#:~:text=%E0%A4%B8%E0%A4%B0%E0%A4%97%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%BE%E0%A4%AE%2C%20%E0%A4%AA%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%2C%20%E0%A4%95%E0%A4%BF%E0%A4%B6%E0%A4%AE%E0%A4%BF%E0%A4%B6,%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%87%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%20%E0%A4%8A%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A4%BE%E0%A4%B5%E0%A4%BE%E0%A4%A8%20%E0%A4%B0%E0%A4%B9%E0%A4%A4%E0%A5%80%20%E0%A4%B9%E0%A5%88.&text=%E0%A4%95%E0%A4%B0%E0%A4%B5%E0%A4%BE%20%E0%A4%9A%E0%A5%8C%E0%A4%A5%20%E0%A4%95%E0%A4%BE%20%E0%A4%B5%E0%A5%8D%E0%A4%B0%E0%A4%A4%2C%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A4%B2%E0%A4%BE,%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%AA%E0%A5%80%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%80%E0%A4%82%20%E0%A4%B9%E0%A5%88.",
+        "https://www.livehindustan.com/lifestyle/health/story-tips-to-remember-while-fasting-for-karwa-chauth-during-pregnancy-8910680.html#:~:text=%2D%20%E0%A4%95%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A5%8C%E0%A4%A5%20%E0%A4%B5%E0%A5%8D%E0%A4%B0%E0%A4%A4%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B8%E0%A4%B0%E0%A4%97%E0%A5%80%20%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87,%E0%A4%A6%E0%A5%82%E0%A4%A7%20%E0%A4%95%E0%A4%BE%20%E0%A4%AA%E0%A5%80%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%88%E0%A4%82%E0%A5%A4",
+        "https://www.naidunia.com/spiritual/vrat-tyohar-diwali-maa-laxmi-pujan-samagri-list-2023-include-these-things-in-lakshmi-puja-on-diwali-see-the-complete-pujan-samagri-list-here-8244382#:~:text=%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%20%E0%A4%AA%E0%A5%82%E0%A4%9C%E0%A4%A8%20%E0%A4%B8%E0%A4%BE%E0%A4%AE%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%80,%E0%A4%94%E0%A4%B0%20%E0%A4%95%E0%A4%B2%E0%A4%BE%E0%A4%B5%E0%A4%BE%20%E0%A4%86%E0%A4%A6%E0%A4%BF%20%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4",
+        "https://www.india.com/hindi-news/faith-hindi/hariyali-teej-2023-why-is-hariyali-teej-celebrated-know-the-importance-of-makeup-on-this-day-6215120/#:~:text=%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A5%80%20%E0%A4%A4%E0%A5%80%E0%A4%9C%20%E0%A4%95%E0%A5%87%20%E0%A4%A6%E0%A4%BF%E0%A4%A8%20%E0%A4%AE%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%8F%E0%A4%82,%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%B0%E0%A4%96%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88."
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.6417672634124756,
+      "bert_recall": 0.6538276672363281,
+      "bert_f1": 0.6477413177490234,
+      "rouge1_f1": 0.07142857142857142,
+      "bleu": 0.018160849415439308
+    },
+    {
+      "data_id": "c4413f86fd2a6ec098a1f6aae539c4db",
+      "country": "india",
+      "query": "सोंठ का दूसरा नाम क्या है?",
+      "ground_truth": "सूखी अदरक को सुंठ या सोंठ के नाम से भी जाना जाता है.",
+      "generated_answer": "सोंठ का दूसरा नाम मेथी है।",
+      "retrieved_sources": [
+        "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Anarkali&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%85%E0%A4%A8%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A4%B2%E0%A5%80%20(%20%E0%A4%B2%E0%A4%BF%E0%A4%9F.,%E0%A4%85%E0%A4%B2%E0%A4%97%2D%E0%A4%85%E0%A4%B2%E0%A4%97%20%E0%A4%B0%E0%A4%BE%E0%A4%AF%20%E0%A4%B0%E0%A4%96%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%88%E0%A4%82%E0%A5%A4",
+        "https://hindi.news18.com/news/rajasthan/jaipur-know-unknown-facts-about-pushkar-lord-brahma-temple-rajasthan-tourism-3526893.html#:~:text=%E0%A4%AA%E0%A5%81%E0%A4%B7%E0%A5%8D%E0%A4%95%E0%A4%B0%20%E0%A4%B8%E0%A4%B0%E0%A5%8B%E0%A4%B5%E0%A4%B0%20%E0%A4%95%E0%A5%80%20%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%20%E0%A4%AD%E0%A5%80,%E0%A4%95%E0%A5%87%20%E0%A4%95%E0%A4%AE%E0%A4%B2%20%E0%A4%AA%E0%A5%81%E0%A4%B7%E0%A5%8D%E0%A4%AA%20%E0%A4%B8%E0%A5%87%20%E0%A4%AC%E0%A4%A8%E0%A5%87.",
+        "https://hi.quora.com/%E0%A4%97%E0%A5%81%E0%A4%A1%E0%A4%BC%E0%A4%B9%E0%A4%B2-%E0%A4%95%E0%A4%BE-%E0%A4%B5%E0%A5%88%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A4%BF%E0%A4%95-%E0%A4%A8%E0%A4%BE%E0%A4%AE-%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE#:~:text=%E0%A4%97%E0%A5%81%E0%A4%A1%E0%A4%BC%E0%A4%B9%E0%A4%B2%20%E0%A4%AF%E0%A4%BE%20%E0%A4%9C%E0%A4%B5%E0%A4%BE%E0%A4%95%E0%A5%81%E0%A4%B8%E0%A5%81%E0%A4%AE%20%E0%A4%B5%E0%A5%83%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87,%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%B9%E0%A5%88%2D%20%E0%A4%B9%E0%A5%80%E0%A4%AC%E0%A5%80%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%82%E0%A4%B8%E0%A5%8D%20%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A4%BE%20%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%A8%E0%A5%87%E0%A4%A8%E0%A5%8D%E0%A4%B8%E0%A4%BF%E0%A4%B8%E0%A5%A4",
+        "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Guru_Granth_Sahib&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%B5%E0%A5%87%20%E0%A4%97%E0%A5%81%E0%A4%B0%E0%A5%81%20%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A4%82%E0%A4%A5%20%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%AC%20%E0%A4%95%E0%A5%8B,%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A4%BE%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%20%E0%A4%AD%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4",
+        "https://www.bhaskar.com/jeevan-mantra/dharm/news/why-are-the-prayers-offered-in-the-sacrifice-who-composed-the-sacrifice-what-is-the-difference-between-a-yajna-and-a-havan-answers-.-similar-questions-related-.-yagya-127671223.html#:~:text=%E0%A4%AF%E0%A4%9C%E0%A5%8D%E0%A4%9E%20%E0%A4%95%E0%A4%BE%20%E0%A4%A6%E0%A5%82%E0%A4%B8%E0%A4%B0%E0%A4%BE%20%E0%A4%A8%E0%A4%BE%E0%A4%AE%20%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF,%E0%A4%95%E0%A4%BE%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%93%E0%A4%82%2C%20%E0%A4%86%E0%A4%B5%E0%A4%B6%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A4%A4%E0%A4%BE%E0%A4%93%E0%A4%82%20%E0%A4%95%E0%A5%8B%20%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%97%E0%A4%BE%E0%A5%A4"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7365586161613464,
+      "bert_recall": 0.7275326251983643,
+      "bert_f1": 0.7320177555084229,
+      "rouge1_f1": 0.3157894736842105,
+      "bleu": 0.03326463783215116
+    },
+    {
+      "data_id": "8cdeb4b4c7bf67cdf159d61df396cce4",
+      "country": "india",
+      "query": "मैं 5 साल के वीजा पर भारत में कब तक रह सकता हूं?",
+      "ground_truth": "180 दिन",
+      "generated_answer": "  5 साल के ई-पर्यटक वीज़ा के लिए, आपको 180 दिनों से अधिक समय तक भारत में रहने की अनुमति नहीं है।",
+      "retrieved_sources": [
+        "https://translate.google.com/translate?u=https://eoi.gov.in/eoisearch/MyPrint.php%3F8503%3F001/0029&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Long%20term%20tourist%20visa%20is,for%20more%20than%20180%20days.",
+        "https://translate.google.com/translate?u=https://indianvisaonline.gov.in/evisa/tvoa.html&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Five%20years%20e%2DTourist%20Visa&text=Five%20years%20from%20the%20date%20of%20grant%20of%20ETA.&text=Stay%3A,and%205%20year%20Tourist%20Visa.",
+        "https://translate.google.com/translate?u=https://indianvisaonline.gov.in/evisa/tvoa.html&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Five%20years%20e%2DTourist%20Visa,date%20of%20grant%20of%20ETA.&text=Stay%3A,and%205%20year%20Tourist%20Visa.",
+        "https://translate.google.com/translate?u=https://www.business-standard.com/finance/personal-finance/how-indians-can-now-get-the-five-year-multi-entry-schengen-visa-124042201164_1.html&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=You%20start%20with%20a%20two,within%20any%20180%2Dday%20period.",
+        "https://translate.google.com/translate?u=https://www.angloinfo.com/how-to/india/moving/residency/long-term-visas&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=A%20long%2Dterm%20visa%20(more,to%20obtain%20a%20Residence%20Permit."
+      ],
+      "answer_in_context": true,
+      "bert_precision": 0.6020098924636841,
+      "bert_recall": 0.7421237826347351,
+      "bert_f1": 0.6647640466690063,
+      "rouge1_f1": 0.08333333333333334,
+      "bleu": 0.017272237992167868
+    },
+    {
+      "data_id": "8e9a672602a56b557950e22b6b59dd65",
+      "country": "india",
+      "query": "क्या कंपनियां वीजा प्रायोजन प्रदान करती हैं?",
+      "ground_truth": "एच-1बी वीजा पर विदेशी आवेदक को प्रायोजित करने की इच्छुक कंपनियों को एक कानूनी प्रक्रिया का पालन करना होगा",
+      "generated_answer": "कंपनियां वीज़ा प्रायोजित कर सकती हैं, लेकिन यह कानूनी नहीं है। वीज़ा प्रायोजित करने के लिए, आपको प्रायोजक लाइसेंस वाले नियोक्ता से नौकरी की पेशकश की आवश्यकता होगी।",
+      "retrieved_sources": [
+        "https://translate.google.com/translate?u=https://www.flypgs.com/en/travel-glossary/visa-sponsorship&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=What%20is%20a%20Sponsor%3F,expenses%20during%20their%20travel%20abroad.",
+        "https://translate.google.com/translate?u=https://www.bankbazaar.com/visa/work-visa.html&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%B5%E0%A5%80%E0%A4%9C%E0%A4%BC%E0%A4%BE%20%E0%A4%AA%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BE&text=%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%87%20%E0%A4%94%E0%A4%B0%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%87%20%E0%A4%86%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80,%E0%A4%95%E0%A5%8B%E0%A4%88%20%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82%E0%A4%97%E0%A5%87%E0%A5%A4",
+        "https://translate.google.com/translate?u=https://spektorlawgroup.com/blog/can-i-sponsor-an-immigrant-that-is-a-non-family-member/&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=The%20government%20allows%20non%2Drelatives,to%20step%20in%20and%20help.",
+        "https://translate.google.com/translate?u=https://www.passportindex.org/visa.php&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Issuance%20Over%20Time-,What%20Is%20a%20Visa%3F,rights%20in%20the%20host%20country.",
+        "https://translate.google.com/translate?u=https://immigrationlawyers-london.com/uk-work-visas.php&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%AF%E0%A5%82%E0%A4%95%E0%A5%87%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%95%20%E0%A4%B5%E0%A5%80%E0%A4%9C%E0%A4%BC%E0%A4%BE,%E0%A4%95%E0%A4%BF%20%E0%A4%A8%E0%A5%80%E0%A4%9A%E0%A5%87%20%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%97%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7343803644180298,
+      "bert_recall": 0.7419829964637756,
+      "bert_f1": 0.7381620407104492,
+      "rouge1_f1": 0.16666666666666666,
+      "bleu": 0.03176023542809473
+    },
+    {
+      "data_id": "f8e77929c26ee7b16abddd81ad4719b6",
+      "country": "india",
+      "query": "लहंगा के लिए कौन सा कपड़ा बेहतर है?",
+      "ground_truth": "सिल्क",
+      "generated_answer": "सिल्क ",
+      "retrieved_sources": [
+        "https://hi.quora.com/%E0%A4%B2%E0%A4%B9%E0%A4%82%E0%A4%97%E0%A5%87-%E0%A4%95%E0%A4%BE-%E0%A4%AB%E0%A5%88%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%95-%E0%A4%94%E0%A4%B0-%E0%A4%B0%E0%A4%82%E0%A4%97-%E0%A4%9A%E0%A4%AF%E0%A4%A8#:~:text=%E0%A4%B8%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%95%20%E0%A4%AF%E0%A4%A6%E0%A4%BF%20%E0%A4%86%E0%A4%AA%20%E0%A4%8F%E0%A4%95%20%E0%A4%90%E0%A4%B8%E0%A4%BE,%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%95%20%E0%A4%AB%E0%A5%88%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%95%20%E0%A4%9A%E0%A5%81%E0%A4%A8%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4",
+        "https://translate.google.com/translate?u=https://brydenapparel.com/chiffon-fabric/&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%B6%E0%A4%BF%E0%A4%AB%E0%A5%89%E0%A4%A8%20%E0%A4%95%E0%A4%AA%E0%A4%A1%E0%A4%BC%E0%A4%BE%20%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%3F,%E0%A4%B8%E0%A5%87%20%E0%A4%AC%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4",
+        "https://hi.quora.com/%E0%A4%B2%E0%A4%B9%E0%A4%82%E0%A4%97%E0%A5%87-%E0%A4%AA%E0%A4%B0-%E0%A4%95%E0%A5%8C%E0%A4%A8-%E0%A4%B8%E0%A5%80-%E0%A4%9C%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%B2%E0%A4%B0%E0%A5%80#:~:text=%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A4%95%E0%A5%80%20%E0%A4%97%E0%A4%B0%E0%A5%8D%E0%A4%A6%E0%A4%A8%20%E0%A4%B2%E0%A4%82%E0%A4%AC%E0%A5%80%20%E0%A4%AF%E0%A4%BE%20%E0%A4%AA%E0%A4%A4%E0%A4%B2%E0%A5%80,%E0%A4%B8%E0%A4%BE%E0%A4%A5%20%E0%A4%AD%E0%A5%80%20%E0%A4%85%E0%A4%9A%E0%A5%8D%E0%A4%9B%E0%A4%BE%20%E0%A4%B2%E0%A4%97%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4",
+        "https://translate.google.com/translate?u=https://www.utsavfashion.com/blog/fabrics/salwar-kameez-fabrics&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=Usually%2C%20women%20prefer%20to%20go,viscose%20are%20also%20widely%20used.",
+        "https://translate.google.com/translate?u=https://en.wikipedia.org/wiki/Georgette_(fabric)&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=%E0%A4%9C%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A5%87%E0%A4%9F%20(%20%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%AA%20%E0%A4%9C%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A5%87%E0%A4%9F%20%E0%A4%B8%E0%A5%87)%20%E0%A4%8F%E0%A4%95,%E0%A4%A7%E0%A4%BE%E0%A4%97%E0%A5%8B%E0%A4%82%20%E0%A4%B8%E0%A5%87%20%E0%A4%AC%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A4%BE%20%E0%A4%9C%E0%A4%BE%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4"
+      ],
+      "answer_in_context": true,
+      "bert_precision": 0.9999999403953552,
+      "bert_recall": 0.9999999403953552,
+      "bert_f1": 0.9999999403953552,
+      "rouge1_f1": 1.0,
+      "bleu": 1.0000000000000004
+    },
+    {
+      "data_id": "e0edd2f58d3a79b9ad49fd3329940dc5",
+      "country": "qatar",
+      "query": "Is Qatar humid or dry?",
+      "ground_truth": "Summer in Qatar The season continues until August when temperatures plateau at around 41 degrees Celsius during the daytime and around 28.9 degrees Celsius at night. Rainfall doesn't typically occur during summer in Qatar, however, humidity can reach between 40–60%.",
+      "generated_answer": "Qatar has a dry, subtropical desert climate with low annual rainfall and intensely hot, humid summers.",
+      "retrieved_sources": [
+        "https://www.expatica.com/qa/moving/about/climate-and-seasons-in-qatar-71269/",
+        "https://visitqatar.com/intl-en/about-qatar/climate",
+        "https://homework.study.com/explanation/is-relative-humidity-highest-in-the-afternoon-when-the-air-temperature-is-highest.html",
+        "https://en.wikipedia.org/wiki/Doha",
+        "https://dohanews.co/too-hot-to-handle-how-the-human-body-responds-to-heat/"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.6842829585075378,
+      "bert_recall": 0.6408036947250366,
+      "bert_f1": 0.6618300080299377,
+      "rouge1_f1": 0.10169491525423728,
+      "bleu": 0.005953779200664871
+    },
+    {
+      "data_id": "a7d59fc45db4a75c8282db0796cffad7",
+      "country": "qatar",
+      "query": "Is Al Wakrah Beach free?",
+      "ground_truth": "super free beach with sunbeds and umbrellas - Review of Al Wakrah Souq, Al Wakrah, Qatar - Tripadvisor.",
+      "generated_answer": "Al Wakrah Beach is free to visit, but you can pay to use the facilities. There are two beaches, one for locals and one for tourists. The local beach is free but the tourist beach is more expensive.",
+      "retrieved_sources": [
+        "https://www.tripadvisor.com/ShowUserReviews-g3221436-d9742366-r736478775-Al_Wakrah_Souq-Al_Wakrah.html",
+        "https://www.myholidays.com/blog/katara-beach-doha/",
+        "https://visitqatar.com/intl-en/things-to-do/beach-holiday/popular-beaches",
+        "https://www.travelup.com/en-gb/blog/best-beaches-in-doha",
+        "https://www.tripadvisor.co.uk/Hotel_Review-g294009-d1026211-Reviews-W_Doha-Doha.html"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.6528263092041016,
+      "bert_recall": 0.6854496002197266,
+      "bert_f1": 0.6687403321266174,
+      "rouge1_f1": 0.18518518518518517,
+      "bleu": 0.024371431437250502
+    },
+    {
+      "data_id": "f84abbe1524aac1bde5ad41c2e4498b5",
+      "country": "qatar",
+      "query": "What is a good substitute for poppy seeds?",
+      "ground_truth": "Flax seeds, hemp seeds and chia seeds are all possible substitutes for poppy seeds. They obviously won't have the same flavor as poppy seeds, but these substitutes are a good choice when making sweet or savory baked goods. Toasting the hemp seeds enhances the nutty flavor.",
+      "generated_answer": "Poppy seeds are a key ingredient in many baked goods, particularly those with a European or Middle Eastern flair. If you're looking for a substitute for poppy seeds, you can try using sesame seeds, sunflower seeds, or even pumpkin seeds.",
+      "retrieved_sources": [
+        "https://hi.wikipedia.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF_%E0%A4%AE%E0%A4%B8%E0%A4%BE%E0%A4%B2%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A5%80#:~:text=%E0%A4%AC%E0%A5%80%E0%A4%9C%20%E0%A4%95%E0%A5%87%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B0%20%E0%A4%95%E0%A5%87%20%E0%A4%AE%E0%A4%B8%E0%A4%BE%E0%A4%B2%E0%A5%87,%2C%20%E0%A4%96%E0%A4%B8%E0%A4%96%E0%A4%B8%20%E0%A4%AF%E0%A4%BE%20%E0%A4%AA%E0%A5%8B%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%2C%20%E0%A4%86%E0%A4%A6%E0%A4%BF%E0%A5%A4",
+        "https://mpkrishi.mp.gov.in/hindisite_New/krishi_capsules_mirch_New.aspx#:~:text=%E0%A4%AC%E0%A5%80%E0%A4%9C%20%E0%A4%95%E0%A5%80%20%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%20%2D%20%E0%A4%AE%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%9A%20%E0%A4%95%E0%A5%80,%E0%A4%AE%E0%A5%87%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BE%20%E0%A4%B8%E0%A4%95%E0%A4%A4%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4",
+        "https://www.aajtak.in/lifestyle/food/story/sabji-premix-recipe-home-made-sabji-masala-kitchen-king-lbsf-1585018-2022-11-28",
+        "https://translate.google.com/translate?u=https://www.pennington.com/all-products/fertilizer/resources/secrets-to-growing-vibrant-hibiscus&hl=hi&sl=en&tl=hi&client=rq&prev=search#:~:text=For%20optimal%20growth%2C%20hibiscus%20requires,bigger%20and%20had%20better%20blooms.",
+        "https://www.herzindagi.com/hindi/society-culture/tips-to-increase-flowering-in-hibiscus-article-251211#:~:text=%E0%A4%AA%E0%A5%80%E0%A4%B2%E0%A5%80%20%E0%A4%B8%E0%A4%B0%E0%A4%B8%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87%20%E0%A4%87%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%E0%A4%AE%E0%A4%BE%E0%A4%B2%20%E0%A4%B8%E0%A5%87,%E0%A4%87%E0%A4%B8%E0%A4%B8%E0%A5%87%20%E0%A4%AD%E0%A5%80%20%E0%A4%AB%E0%A5%82%E0%A4%B2%20%E0%A4%96%E0%A4%BF%E0%A4%B2%E0%A4%A8%E0%A5%87%20%E0%A4%B2%E0%A4%97%E0%A5%87%E0%A4%82%E0%A4%97%E0%A5%87%E0%A5%A4"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7352776527404785,
+      "bert_recall": 0.7330875992774963,
+      "bert_f1": 0.7341809868812561,
+      "rouge1_f1": 0.29545454545454547,
+      "bleu": 0.054674881293514874
+    },
+    {
+      "data_id": "35f3f6a9f2dab7b83c69582d7a409c77",
+      "country": "qatar",
+      "query": "What dialect is spoken in Qatar?",
+      "ground_truth": "Arabic is the official language of Qatar, with Qatari Arabic or Gulf Arabic the local dialect. Qatari Sign Language is the language of the deaf community.",
+      "generated_answer": "Qatari Arabic, also known as Gulf Arabic, is the local dialect spoken in Qatar.",
+      "retrieved_sources": [
+        "https://www.familysearch.org/en/wiki/Qatar_Languages",
+        "https://www.britannica.com/place/Qatar",
+        "https://www.sportingnews.com/ca/soccer/news/language-speak-qatar-english-world-cup-2022/hhyh0yjfonbkpldzfg551kws",
+        "https://www.worldatlas.com/articles/what-languages-are-spoken-in-qatar.html",
+        "https://www.familysearch.org/en/wiki/Qatar_Languages"
+      ],
+      "answer_in_context": true,
+      "bert_precision": 0.8109419345855713,
+      "bert_recall": 0.7937854528427124,
+      "bert_f1": 0.8022719621658325,
+      "rouge1_f1": 0.45,
+      "bleu": 0.09240270758299245
+    },
+    {
+      "data_id": "e7e05eb7ec481640a6317974bc54ab96",
+      "country": "qatar",
+      "query": "How many days will take for visit visa approval in Qatar?",
+      "ground_truth": "Please note that the normal visa processing time is about two weeks, while the fast-track service takes about five to six days.",
+      "generated_answer": "The processing time for a visit visa in Qatar can take anywhere from 3 to 5 working days.",
+      "retrieved_sources": [
+        "https://qatarcompanyformation.com/qatar-permanent-residency/",
+        "https://www.expatica.com/qa/moving/visas/getting-a-work-permit-in-qatar-71730/",
+        "https://www.qu.edu.qa/students/international-students/frequent-asked-questions",
+        "https://www.state.gov/wp-content/uploads/2019/01/Qatar.pdf",
+        "https://www.afar.com/travel-tips/if-you-only-have-three-days-in-doha"
+      ],
+      "answer_in_context": false,
+      "bert_precision": 0.7817831039428711,
+      "bert_recall": 0.7545564770698547,
+      "bert_f1": 0.7679285407066345,
+      "rouge1_f1": 0.2926829268292683,
+      "bleu": 0.04281981560061815
+    }
+  ]
+}

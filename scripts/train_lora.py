@@ -2,11 +2,12 @@
 Train a LoRA adapter for Llama 3.2 on the fine-tuning JSONL.
 
 Input : finetune_data/training_data.jsonl, written by
-        `python -m scripts.finetune_llm` (chat-format examples whose
-        last message is the ground-truth answer).
-Output: lora_adapter/ (adapter_model.safetensors + adapter_config.json),
-        which `python -m scripts.finetune_llm --adapter lora_adapter
-        --skip-data` registers in Ollama as 'nativrag-finetuned'.
+        `python -m scripts.build_finetune_data` (chat-format examples
+        whose last message is the ground-truth answer).
+Output: lora_adapter/ (adapter_model.safetensors + adapter_config.json).
+        Ollama cannot load it directly; merge it into the base model,
+        convert to GGUF and `ollama create` it as 'nativrag-finetuned'
+        (see README, section 3).
 
 Requires a CUDA GPU (about 16 GB is enough for the 3B model with
 gradient checkpointing) and the packages in requirements-train.txt.
@@ -219,7 +220,7 @@ def main():
     if not args.data.exists():
         parser.error(
             f"Training data not found: {args.data}. "
-            "Run 'python -m scripts.finetune_llm' first."
+            "Run 'python -m scripts.build_finetune_data' first."
         )
 
     use_cuda = torch.cuda.is_available()
@@ -410,8 +411,7 @@ def main():
     print(f"Examples       : {len(examples)}")
     print(f"Optimizer steps: {total_steps}")
     print(f"Adapter saved  : {args.output_dir}")
-    print("Next: python -m scripts.finetune_llm "
-          f"--adapter {args.output_dir} --skip-data")
+    print("Next: merge + GGUF + ollama create (see README, section 3)")
     print("=" * 60)
 
 

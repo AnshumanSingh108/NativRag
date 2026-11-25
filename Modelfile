@@ -1,0 +1,26 @@
+FROM ./models/nativrag-q8_0.gguf
+
+# Same layout the adapter was trained on (scripts/train_lora.py format_prompt):
+# plain Llama-3 headers, no "Cutting Knowledge Date" / "Today Date" lines.
+# Ollama adds the <|begin_of_text|> token itself. Without this block Ollama
+# falls back to a ChatML template, which is wrong for Llama 3.
+TEMPLATE """{{- range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
+
+{{ .Content }}<|eot_id|>
+{{- end }}<|start_header_id|>assistant<|end_header_id|>
+
+"""
+
+SYSTEM """You are a knowledgeable and helpful assistant that answers questions about countries, their laws, constitutions, culture, and civic procedures using the provided reference documents.
+
+Instructions:
+- Use the information from the documents to give a clear, detailed, and helpful answer.
+- Combine information from multiple documents if needed.
+- The documents may be in English, Hindi, or Bengali. Answer in the same language as the user's question.
+- If the documents contain step-by-step instructions, present them clearly.
+- Only say you cannot answer if the documents are truly unrelated to the question."""
+
+PARAMETER stop "<|eot_id|>"
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096

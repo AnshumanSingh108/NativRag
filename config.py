@@ -62,7 +62,6 @@ DEFAULT_SAMPLE_SIZE = 50
 
 # ── Fine-tuning defaults ─────────────────────────────────────
 FINETUNE_OUTPUT_DIR = PROJECT_ROOT / "finetune_data"
-MODELFILE_PATH = PROJECT_ROOT / "Modelfile"
 
 # ── LoRA training (scripts/train_lora.py) ────────────────────
 # Ollama's "llama3.2" is Llama-3.2-3B-Instruct. The adapter must be

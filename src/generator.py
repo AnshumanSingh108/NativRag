@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 # Single source of truth for the prompt. Used both for answering
-# (Generator) and for building fine-tuning data (scripts/finetune_llm.py),
+# (Generator) and for building fine-tuning data (scripts/build_finetune_data.py),
 # so a tuned model sees the same format it was trained on.
 SYSTEM_PROMPT = (
     "You are a knowledgeable and helpful assistant that answers "
@@ -99,8 +99,8 @@ def resolve_model(preferred, fallback=BASE_LLM_MODEL):
     logger.warning(
         f"Ollama model '{preferred}' is not installed; "
         f"falling back to '{fallback}'. "
-        "Register a trained adapter with "
-        "'python -m scripts.finetune_llm --adapter <path>'."
+        "Register the fine-tuned model as described in the "
+        "README (section 3)."
     )
     return fallback
 
